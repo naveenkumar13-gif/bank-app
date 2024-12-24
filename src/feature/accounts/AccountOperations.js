@@ -20,10 +20,10 @@ function AccountOperations() {
   console.log(balance);
 
   function handleDeposit() {
-    if (!depositAmount || !currency) return;
+    if (!depositAmount) return;
     dispatch(deposit(depositAmount, currency));
-    setDepositAmount("");
     setCurrency("USD");
+    setDepositAmount("");
   }
 
   function handleWithdrawal() {

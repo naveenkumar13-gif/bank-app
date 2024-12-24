@@ -7,13 +7,13 @@ function formatCurrency(value) {
   }).format(value);
 }
 
-function BalanceDisplay({ Balance }) {
-  return <div className="balance">{formatCurrency(Balance)}</div>;
+function BalanceDisplay({ balance }) {
+  return <div className="balance">{formatCurrency(balance)}</div>;
 }
-// from store => state
+
 function mapStateToProps(state) {
   return {
-    Balance: state.account.balance,
+    balance: state.account.balance,
   };
 }
 export default connect(mapStateToProps)(BalanceDisplay);
